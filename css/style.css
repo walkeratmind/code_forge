@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+	box-sizing: border-box;
+	text-align: justify;
+}
+.container{
+	width: 94%;
+	margin: 0 auto;
+	background: #f4f4f4;
+}
+.active{
+        font-weight: bolder;
+        color: rgb(31, 28, 28);
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+/*
+ * ===================================================================
+ * 1--------------------------HEADER-SECTION--------------------------
+ * ------------------------------------------------------------------- 
+ */
+/*-------------Extra classes for responsive navbar-------------------*/
+.ham{
+	color: #fff;
+	font-size: 1.8em;
+	cursor: pointer;
+}
+.handle{
+	width: 100%;
+	text-align: left;
+	padding: 15px 10px;
+	cursor: pointer;
+	display: none;
+	box-sizing: border-box;
+}
+.logo1{
+	display: none;
+}
+/*-----------------------Navigation bar------------------------------*/
+nav{
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+nav ul{
+	margin: 0;
+	padding: 0;
+	overflow:hidden;
+	text-align: right;
+	background: rgba(226, 220, 220, 0.2);
+}
+nav ul .logo{
+	float: left;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+}
+nav ul li{
+	display: inline-block;
+	padding: 1.2em .7em;
+	text-transform: uppercase;
+}
+nav li a{
+	color: #000;
+	transition: ease-in .3s;
+	font-family: 'Source Code Pro', monospace;
+}
+nav li a:hover{
+	text-decoration: none;
+	padding-top: .7em;
+	border-top: 2px solid #000;
+}
+/*-----------------------Banner Image and Text-------------------------*/
+.hero{
+	background: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)),url('../images/main.jpg') no-repeat center center;
+	background-size: cover;
+	background-attachment: fixed; 
+	height: 100vh;
+}
+.hero h2{
+	padding-top: 35vh;
+	text-align: center;
+	font-size: 5vw;
+	font-family: 'Source Code Pro', monospace;
+}
+.hero h3{
+	text-align: center;
+	font-size: 3vw;
+	color: rgb(0, 0, 0);
+	color:#263534;
+        margin-bottom: 1em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+/*
+ * ===================================================================
+ * 3---------------------------MEDIA QUERIES--------------------------
+ * ------------------------------------------------------------------- 
+ */
+ @media screen and (max-width:900px) {
+	/*--------------Navigation section-------------*/
+	.handle{
+		display: block;
+	}
+	nav{
+		position: relative;
+	}
+	nav ul{
+		max-height: 0;
+		background: none;
+	}
+	.show{
+		max-height: 20em;
+	}
+	nav ul li{
+		width: 100%;
+		box-sizing: border-box;
+		text-align: left;
+		padding: 10px;
+		padding-left: 30px;
+	}
+	nav li:hover{
+		background: rgba(212,212,212,.5);
+	}
+	nav li a{
+		transition: none;
+		border:none;
+	}
+	nav li a:hover{
+		text-decoration: none;
+		border: none;	
+	}
+	.logo{
+		display: none;
+	}
+	.logo1{
+		display: block;
+		text-align: center;
+		padding-top: .3em;
+	}
+	.hero h2{
+		padding-top: 25vh;
+
+	}
+}
