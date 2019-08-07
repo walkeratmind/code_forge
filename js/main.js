@@ -16,11 +16,12 @@ function particlesJsConfig() {
         /* ---- particles.js config ---- */
 
 // var particleColor = "#03A9F4";          // color for polygon edges and lines
-var particleColor = "#E91E63";          // color for polygon edges and lines
+// var particleColor = "#E91E63";          // color for polygon edges and lines
+var particleColor = "#FFFFFF";          // color for polygon edges and lines
 particlesJS("particles-js", {
         "particles": {
           "number": {
-            "value": 280,
+            "value": 160,
             "density": {
               "enable": true,
               "value_area": 800
@@ -30,13 +31,13 @@ particlesJS("particles-js", {
             "value": particleColor
           },
           "shape": {
-            "type": "edge",
+            "type": "circle",
             "stroke": {
               "width": 0,
               "color": "#000000"
             },
             "polygon": {
-              "nb_sides": 3
+              "nb_sides": 5
             },
             "image": {
               "src": "img/github.svg",
@@ -55,7 +56,7 @@ particlesJS("particles-js", {
             }
           },
           "size": {
-            "value": 3,
+            "value": 5,
             "random": true,
             "anim": {
               "enable": false,
@@ -91,7 +92,7 @@ particlesJS("particles-js", {
           "events": {
             "onhover": {
               "enable": true,
-              "mode": "grab"
+              "mode": "repulse"
             },
             "onclick": {
               "enable": true,
@@ -131,21 +132,21 @@ particlesJS("particles-js", {
       
       /* ---- stats.js config ---- */
       
-      var count_particles, stats, update;
-      stats = new Stats;
-      stats.setMode(0);
-      stats.domElement.style.position = 'absolute';
-      stats.domElement.style.left = '0px';
-      stats.domElement.style.top = '0px';
-      document.body.appendChild(stats.domElement);
-      count_particles = document.querySelector('.js-count-particles');
-      update = function() {
-        stats.begin();
-        stats.end();
-        if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
-          count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
-        }
-        requestAnimationFrame(update);
-      };
-      requestAnimationFrame(update);
+      // var count_particles, stats, update;
+      // stats = new Stats;
+      // stats.setMode(0);
+      // stats.domElement.style.position = 'absolute';
+      // stats.domElement.style.left = '0px';
+      // stats.domElement.style.top = '0px';
+      // document.body.appendChild(stats.domElement);
+      // count_particles = document.querySelector('.js-count-particles');
+      // update = function() {
+      //   stats.begin();
+      //   stats.end();
+      //   if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      //     count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+      //   }
+      //   requestAnimationFrame(update);
+      // };
+      // requestAnimationFrame(update);
 }
